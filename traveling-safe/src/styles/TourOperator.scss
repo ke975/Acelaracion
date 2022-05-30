@@ -1,0 +1,50 @@
+.contenedor .operator{
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 4rem;
+
+}
+
+
+.contenedor .operator .enterprise {
+   display: flex;
+        gap: 2rem;
+        margin-top: 3rem;
+}
+
+.contenedor .operator .enterprise img{
+    width: 400px;
+    height: auto;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius:20px ;
+  
+}
+
+
+
+
+ .descriptionoperator {
+
+
+    justify-content: center;
+    text-align: justify;
+
+    margin-top: 3rem;
+}
+
+.descriptionoperator button {
+
+    width: 250px;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  
+    font-size: 1.2rem;
+}
+
+.descriptionoperator button a{
+    text-decoration: none;
+    color: white;
+}
+

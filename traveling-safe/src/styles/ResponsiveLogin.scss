@@ -1,0 +1,307 @@
+@media (max-width: 360px) {
+    aside {
+      display: none;
+    }
+    main {
+      max-width: 360px;
+      max-height: 640px;
+    }
+    main .main-content > img {
+      width: 400px;
+      height: 400px;
+    }
+  
+    .main-content form input {
+      width: 229px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .main-content form button {
+      width: 229px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ffa500;
+      color: #000000;
+      font-size: 15px;
+      gap: 1rem;
+    }
+  
+    .main-content form button img {
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+    }
+  
+    .react-modal-content form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+  
+    .react-modal-content form input {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 51px;
+      margin-right: 0 auto;
+      text-align: center;
+      border: 7px;
+    }
+  
+    .react-modal-content form button {
+      width: 200px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ffa500;
+      color: #000000;
+      font-size: 18px;
+      border-radius: 7px;
+      gap: 1rem;
+    }
+  
+    .react-modal-content form h1 {
+      margin-top: -50px;
+      text-align: center;
+    }
+  
+    .react-modal-content {
+      display: flex;
+      flex-wrap: wrap;
+      width: 260px;
+      height: 400px;
+      background-color: #f0f2f5;
+      margin-right: 80px;
+      border-radius: 7px;
+    }
+  
+    .react-modal-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .Register {
+      width: 260px;
+      height: 51px;
+      margin-left: 95px;
+      text-align: center;
+      background-color: #ffa500;
+      color: #000000;
+      font-size: 18px;
+      gap: 1rem;
+    }
+  
+  }
+  
+
+  @media (max-width: 375px) {
+    aside {
+      display: none;
+    }
+    main {
+      max-width: 340px;
+      max-height: 640px;
+    }
+    main .main-content > img {
+      width: 400px;
+      height: 400px;
+    }
+  
+    .main-content form input {
+      width: 229px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .main-content form button {
+      width: 229px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ffa500;
+      color: #000000;
+      font-size: 15px;
+      gap: 1rem;
+    }
+  
+    .main-content form button img {
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+    }
+  
+    .react-modal-content form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+  
+    .react-modal-content form input {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+      border: 7px;
+    }
+  
+    .react-modal-content form button {
+      width: 200px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ffa500;
+      color: #000000;
+      font-size: 18px;
+      border-radius: 7px;
+      gap: 1rem;
+    }
+  
+    .react-modal-content form h1 {
+      margin-top: -50px;
+      text-align: center;
+    }
+  
+    .react-modal-content {
+      display: flex;
+      flex-wrap: wrap;
+      width: 280px;
+      height: 400px;
+      background-color: #f0f2f5;
+      margin: auto;
+      border-radius: 7px;
+    }
+  
+    .react-modal-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+
+  @media (max-width: 414px) {
+    aside {
+      display: none;
+    }
+    main {
+      max-width: 350px;
+      max-height: 640px;
+    }
+    main .main-content > img {
+      width: 450px;
+      height: 450px;
+    }
+  
+    .main-content form input {
+      width: 259px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    .main-content form button {
+      width: 259px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ffa500;
+      color: #000000;
+      font-size: 15px;
+      gap: 1rem;
+    }
+  
+    .main-content form button img {
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+    }
+  
+    .react-modal-content form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+  
+    .react-modal-content form input {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+      border: 7px;
+    }
+  
+    .react-modal-content form button {
+      width: 250px;
+      height: 51px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ffa500;
+      color: #000000;
+      font-size: 18px;
+      border-radius: 7px;
+      gap: 1rem;
+    }
+  
+    .react-modal-content form h1 {
+      margin-top: -50px;
+      text-align: center;
+    }
+  
+    .react-modal-content {
+      display: flex;
+      flex-wrap: wrap;
+      width: 340px;
+      height: 400px;
+      background-color: #f0f2f5;
+      margin: auto;
+      border-radius: 7px;
+    }
+  
+    .react-modal-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  

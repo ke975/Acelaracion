@@ -1,0 +1,195 @@
+.banneer {
+  width: 100%;
+  height: 500px;
+  background: url("https://images.unsplash.com/photo-1451956632809-303a9f8c92d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1088&q=80")
+    no-repeat;
+  background-color: rgba(255, 0, 0, 0.05);
+  background-size: cover;
+  margin-top: -5px;
+}
+
+
+header{
+    background-color:  #003580;
+}
+
+.contenido {
+  max-width: 1180px;
+  display: flex;
+  height: 800px;
+  margin: 0 auto;
+
+  justify-content: start;
+}
+
+.contenido h2 {
+  color:#003580 ;
+  align-items: center;
+  display: flex;
+  text-align: center;
+
+}
+
+img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+figure {
+  margin: 0;
+  display: flex;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+
+
+.container {
+  column-count:3;
+  column-gap:1.5rem;
+ 
+}
+
+
+.positioned {
+  grid-column: box-start / box-end;
+  border: 5px solid white;
+}
+
+.Contact {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1125px;
+  height: 50vh;
+  margin: 0 auto;
+  margin: 0 auto;
+}
+
+.Contact img {
+  width: 34px;
+  height: 34px;
+  gap: 4rem;
+}
+
+.Contact a {
+  font-size: 1.2rem;
+  gap: 2rem;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-decoration: none;
+  
+}
+
+.Contact .btn-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 250px;
+  height: 50px;
+ border-top-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+}
+
+.Contact p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.callin {
+  display: grid;
+  gap: 2rem;
+}
+.Contact .callin .icon img {
+  width: 34px;
+  height: 34px;
+  gap: 3rem;
+  margin-right: 2rem;
+  
+}
+
+.btn-btn img{ 
+margin-left: 1rem;
+}
+
+.btn-btn span{ 
+  margin-right: 1.2rem;
+  font-size: 1.5rem;
+  color: white;
+  }
+
+@media (max-width: 360px) {
+  .contenido h2 {
+    color: white;
+    align-items: flex-end;
+    display: flex;
+    text-align: center;
+    font-size: 1.5rem;
+    display: none;
+  }
+
+  section h3 {
+    font-size: 1.5rem;
+  }
+
+  .Contact {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    height: 50vh;
+    margin: 10px;
+  }
+
+  .Contact img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Contact span {
+    font-size: 0.8rem;
+
+    text-align: center;
+  }
+
+  .Contact .btn-btn {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+    width: 150px;
+    height: 36px;
+    border-radius: 3px;
+  }
+
+  .Contact p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .callin {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 5px;
+  }
+  .Contact .callin .icon img {
+    width: 34px;
+    height: 34px;
+    gap: 0.5rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Contact .info h2 {
+    font-size: 1.3rem;
+  }
+
+  .Contact .info {
+    margin-left: 5px;
+  }
+}
