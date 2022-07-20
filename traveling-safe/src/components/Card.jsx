@@ -1,98 +1,76 @@
 import "../styles/contenedor.scss";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Divider } from "./divider";
 import { IoStarHalfOutline } from "react-icons/io5";
+import axios from "axios";
+import { api } from "../services/api";
+
+
+
 export function Card() {
+
+
+  const [data, setData] = useState([]);
+
+  const getPlaces = async () => {
+    await axios
+      .get(api)
+      .then((response) => {
+        console.log(response.data.places);
+        setData(response.data.places);
+      })
+      .catch(() => {
+        console.log("erro tende mas tarde");
+      });
+  };
+
+  useEffect(() => {
+    getPlaces();
+  });
+
+
+  
   return (
     <div>
       <div className="contenedor mt-5">
         <h2 className="text-center">Lugares de Nicaragua</h2>
         <div className="row ml-3 mt-5">
-          <div className="card m-2 col-xs-12" style={{ width: "20rem" }}>
-            <img
-              src="https://www.hiltonhotels.com/assets/img/Hotel%20Images/Hilton/M/MGAHFHF/MGAHFHF_quicklook_full_pool.jpg"
-              className="card-img-top"
-              alt="Hilton Princess Managua"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Hilton Princess Managua</h5>
-              <p className="card-text">
-                Es una magnífica elección para viajeros que vayan a Managua, ya
-                que ofrece un ambiente para familias además de numerosos
-                servicios diseñados para mejorar su estancia.
-              </p>
-              <Link to="/Reservation" className="btn btn-primary m-1">
-                Contactanos
-              </Link>
-              <span>
-              
-            <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-            <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-            <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-            <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-          
-          </span>
-          
-            </div>
-          </div>
+      {data.map((item)=>(
 
-          <div className="card m-2 col-xs-12" style={{ width: "20rem" }}>
-            <img
-              src="https://img.directhotels.com/ni/managua/barcelo-montelimar-beach-managua/1.jpg"
-              className="card-img-top"
-              alt="Barcelo Montelimar"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Barceló Montelimar</h5>
-              <p className="card-text">
-                Se encuentra en un enclave privilegiado de Nicaragua, en primera
-                línea de playa rodeado de una impresionante y exuberante
-                vegetación tropical desde donde se puede disfrutar de los
-                mejores atardeceres del Pacífico.
-              </p>
-              
-              <Link to="/Reservation" className="btn btn-primary ml-2">
-                Contactanos
-              </Link>
-              <span>
-              
-              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-            
-            </span>
-            </div>
-          </div>
+<div className="card m-2 col-xs-12" key={item.id}style={{ width: "20rem" }}>
+<img
+  src={item.Images}
+  className="card-img-top"
+  alt={item.namePlace}
+/>
+<div className="card-body">
+  <h5 className="card-title">{item.namePlaces}</h5>
+  <p className="card-text">
+     {item.description}
+  </p>
+  <Link to={"/Reservation/" + item.id} className="btn btn-primary m-1">
+    Contactanos
+  </Link>
+  <span>
+  
+<img src={item.PointPlace} style={{width:"2.5rem"}} alt="puntuacion" />
 
-          <div className="card m-2 col-xs12" style={{ width: "20rem" }}>
-            <img
-              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/20/05/05/dc/magnific-rock-surf-resort.jpg?w=900&h=-1&s=1"
-              className="card-img-top"
-              alt="Magnific Rock - Surf Resort & Yoga Retreat"
-            />
-            <div className="card-body">
-              <h5 className="card-title">
-                Magnific Rock - Surf Resort & Yoga Retreat
-              </h5>
-              <p className="card-text">
-                Este hotel informal ubicado en un acantilado con vista a la
-                playa Popoyo y al océano Pacífico está a 12 minutos a pie de la
-                playa Santana y a 11 km del aeropuerto Costa Esmeralda.
-              </p>
-              <Link to="/Reservation" className="btn btn-primary ml-2">
-                Contactanos
-              </Link>
-              <span>
-              
-              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-              <IoStarHalfOutline size={"2.1rem"} color={"#ffd800"} />
-            
-            </span>
-            </div>
-          </div>
+</span>
+
+</div>
+</div>
+
+
+
+
+      ))}
+
+
+
+
+      
+
         </div>
       </div>
 

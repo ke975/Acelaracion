@@ -193,3 +193,78 @@ margin-left: 1rem;
     margin-left: 5px;
   }
 }
+
+
+
+@media (min-width:375px)and (max-width:415px){
+  .contenido h3 {
+    color: white;
+    align-items: flex-end;
+    display: flex;
+    text-align: center;
+    font-size: 1.5rem;
+    display: none;
+  }
+
+  section h3 {
+    font-size: 1.5rem;
+  }
+
+  .Contact {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    height: 50vh;
+    margin: 10px;
+  }
+
+  .Contact img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Contact span {
+    font-size: 0.8rem;
+
+    text-align: center;
+  }
+
+  .Contact .btn-btn {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+    width: 150px;
+    height: 36px;
+    border-radius: 3px;
+  }
+
+  .Contact p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .callin {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 5px;
+  }
+  .Contact .callin .icon img {
+    width: 34px;
+    height: 34px;
+    gap: 0.5rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Contact .info h2 {
+    font-size: 1.3rem;
+  }
+
+  .Contact .info {
+    margin-left: 5px;
+  }
+}

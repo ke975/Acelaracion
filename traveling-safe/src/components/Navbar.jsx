@@ -37,7 +37,7 @@ export function Navbar() {
        
        <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-        <img src={user.photoURL} className="rounded-circle  " style={{width:"30px",height:"30px"}} alt="foto avatar del usuario" />
+        <img src={user.photoURL} className="rounded-circle  " style={{width:"30px",height:"30px", marginRight:"10px"}} alt="foto avatar del usuario" />
         {user.displayName}
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">

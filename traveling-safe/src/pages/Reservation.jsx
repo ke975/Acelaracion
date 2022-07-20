@@ -1,13 +1,46 @@
 import React from "react";
-
+import {useEffect, useState} from 'react'
 import { Navbar } from "../components/Navbar";
 import { Form } from "../components/form";
 import { Carroussel } from "../components/carrousell";
 import { Contact } from "../components/Contact";
 import { Divider } from "../components/divider";
 import { Footer } from "../components/footer";
+import axios from 'axios'
+import {api} from '../services/api'
 
-export function Reservation() {
+
+
+
+export function Reservation(props) {
+
+  const [data,setData]=  useState([]);  
+  const [id,setId]= useState(props.match.params.id)
+
+
+
+  useEffect(()=>{
+
+
+  
+
+    const getInformation = async ()=>{
+      await axios.get(api + "/places/" + id)
+      
+      .then((response)=>{
+        console.log(response.data.places)
+        setData(response.data.places)
+        
+      })
+      .catch(()=>{
+   console.log("erro:tente mais tarde")
+      })
+    }
+    getInformation()
+  
+  },[id])
+  
+
   return (
     <>
       <header>
@@ -17,12 +50,24 @@ export function Reservation() {
       <h2 className="text-center text-secondary mt-4">
         ¡Bienvenido a nuestro <br /> sistema de Reservaciones!
       </h2>
+
+      <h2 className="text-center">{data.namePlaces}</h2>
       <div className="contenedor mt-5">
         <div className="row mb-4">
           <div className="col-md-4">
             <div>
               <img
-                src="https://lugaresturisticos365.com/wp-content/uploads/Reserva-Natural-Volcan-Mombacho.jpg"
+                src={data.Images}
+                alt="Sunset and boats"
+              />
+            </div>
+          </div>
+       
+          <div className="col-md-4">
+            <div>
+            
+              <img
+                src={data.Images}
                 alt="Sunset and boats"
               />
             </div>
@@ -30,15 +75,7 @@ export function Reservation() {
           <div className="col-md-4">
             <div>
               <img
-                src="https://lugaresturisticos365.com/wp-content/uploads/Reserva-Natural-Volcan-Mombacho.jpg"
-                alt="Sunset and boats"
-              />
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div>
-              <img
-                src="https://lugaresturisticos365.com/wp-content/uploads/Reserva-Natural-Volcan-Mombacho.jpg"
+                src={data.Images1}
                 alt="Sunset and boats"
               />
             </div>
@@ -46,7 +83,7 @@ export function Reservation() {
           <div className="col-md-4 mt-3">
             <div>
               <img
-                src="https://lugaresturisticos365.com/wp-content/uploads/Reserva-Natural-Volcan-Mombacho.jpg"
+                src={data.Images2}
                 alt="Sunset and boats"
               />
             </div>
@@ -55,7 +92,7 @@ export function Reservation() {
           <div className="col-md-4 mt-3">
             <div>
               <img
-                src="https://lugaresturisticos365.com/wp-content/uploads/Reserva-Natural-Volcan-Mombacho.jpg"
+                src={data.Images3}
                 alt="Sunset and boats"
               />
             </div>
@@ -63,7 +100,7 @@ export function Reservation() {
           <div className="col-md-4 mt-3">
             <div>
               <img
-                src="https://lugaresturisticos365.com/wp-content/uploads/Reserva-Natural-Volcan-Mombacho.jpg"
+                src={data.Images4}
                 alt="Sunset and boats"
               />
             </div>

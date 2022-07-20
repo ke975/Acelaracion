@@ -24,7 +24,7 @@
 
 
 
- .descriptionoperator {
+ .description {
 
 
     justify-content: center;
@@ -48,3 +48,35 @@
     color: white;
 }
 
+@media (max-width: 390px)and (max-width:450px){
+.contenedor{
+    margin-left: 10px;
+}
+.contenedor h1{
+    font-size:16px;
+    text-align: center;
+
+}
+.description p{
+    text-align: justify;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.description h2{
+    text-align: center;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+
+.description button{
+    margin-left: 10px;
+}
+
+.contenedor .operator .enterprise img{
+    width: 300px;
+    margin-left: 20px;
+}
+}

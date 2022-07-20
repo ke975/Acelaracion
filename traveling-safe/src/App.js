@@ -14,7 +14,7 @@ function App() {
       <Route path="/" exact component={Home}/>
       <Route path="/Login" component={Login}/>
       <Route path="/places" component={Places}/>
-      <Route path="/Reservation" component={Reservation}/>
+      <Route path="/Reservation/:id" component={Reservation}/>
     </Switch>
     </AuthProvider>
   </BrowserRouter>
