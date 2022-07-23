@@ -96,7 +96,7 @@ export function Login() {
         <img src={Beach} alt="" />
       </aside>
       <main>
-        <div className="main-content">
+        <div className="main-content mb-5 col-md-12">
           <img
             src={Logo}
             alt="Logo de Trsavelin safe"
@@ -132,7 +132,7 @@ export function Login() {
             </form>
           </Modal>
 
-          <form onSubmit={handleSubmit}>
+          <form className="mb-5" onSubmit={handleSubmit}>
             {error ? (
               <div className="alert  text-center col-sm-4 col-md-12">
                 {error}
@@ -161,10 +161,9 @@ export function Login() {
             </button>
 
             <button onClick={handleResetPassword}>Olvide mi contraseña</button>
+            <button onClick={openModal}>Registrarse</button>
           </form>
-          <button className="Register sm-col-4 mt-3" onClick={openModal}>
-            Registrarse
-          </button>
+          
         </div>
       </main>
     </div>
