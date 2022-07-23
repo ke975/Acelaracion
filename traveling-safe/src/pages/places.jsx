@@ -3,9 +3,11 @@ import { Contact } from "../components/Contact";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/footer";
 import { Card } from "../components/Card";
-import {IoWine} from 'react-icons/io5'
+
 import {Divider} from '../components/divider'
 import { Carroussel } from "../components/carrousell";
+
+
 export function Places() {
   return (
     <div>
@@ -16,6 +18,9 @@ export function Places() {
     <div>
     <Carroussel/>
     </div>
+
+
+ 
 
       <section className="contenedor">
         <h2 className="ml-5 mt-5">Diversion al maximo con nustros paquetes Turisiticos.</h2>

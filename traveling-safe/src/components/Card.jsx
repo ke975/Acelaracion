@@ -1,5 +1,5 @@
 import "../styles/contenedor.scss";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import { Divider } from "./divider";
 import { IoStarHalfOutline } from "react-icons/io5";
@@ -12,6 +12,7 @@ export function Card() {
 
 
   const [data, setData] = useState([]);
+const [search,setSearch] =useState("")
 
   const getPlaces = async () => {
     await axios
@@ -27,16 +28,46 @@ export function Card() {
 
   useEffect(() => {
     getPlaces();
-  });
+  },[]);
 
+const  handleSearch = (event)=>{
+  setSearch(event.target.value)
+}
+
+const filteredPlaces= data.filter((data)=>{
+  return data.namePlaces.toLowerCase().includes(search.toLowerCase());
+})
 
   
   return (
     <div>
+
+
+
+
+
       <div className="contenedor mt-5">
+      <form >
+  <div class="form-group col-md-6 ml-auto mr-auto">
+    <h3 className="text-center mb-5 text-primary" for="formGroupExampleInput">Busca  tu próxima aventuras</h3>
+    <input  class="form-control" id="formGroupExampleInput" 
+    
+    
+    type="text"
+    placeholder="Search..."
+    value={search}
+    onChange={handleSearch}/>
+  </div>
+  
+</form>
         <h2 className="text-center">Lugares de Nicaragua</h2>
+
         <div className="row ml-3 mt-5">
-      {data.map((item)=>(
+        
+      {
+      
+      
+      filteredPlaces.map((item)=>(
 
 <div className="card m-2 col-xs-12" key={item.id}style={{ width: "20rem" }}>
 <img

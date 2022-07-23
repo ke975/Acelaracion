@@ -19,16 +19,7 @@ export function Home() {
       <Carroussel/>
       </div>
 
-      <section>
-        <h2 className="text-center mt-5">
-          {" "}
-          <strong>
-            {" "}
-            Lugares mas frecuentados <br /> de
-            <br /> Nicaragua{" "}
-          </strong>
-        </h2>
-      </section>
+    
       <Divider/>
      
 <Card/>
