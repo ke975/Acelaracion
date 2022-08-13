@@ -156,7 +156,7 @@ export function Login() {
               Entrar
             </button>
             <button onClick={handleGoogleSignin}>
-              <img src={Google} width={30} height={30} alt="" />
+         
               Iniciar Session con Google
             </button>
 
