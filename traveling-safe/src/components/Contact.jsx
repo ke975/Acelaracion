@@ -1,5 +1,7 @@
 import '../styles/banneer.scss'
-
+import mail from '../assets/mail.png'
+import telefono from '../assets/telefono.png'
+import mapa from '../assets/mapa.png'
 export function Contact(){
     return(
        <>
@@ -20,16 +22,16 @@ export function Contact(){
 <div className='callin'>
 
   <div>
-  <img  className='icon' src="https://cdn-icons.flaticon.com/png/512/4213/premium/4213204.png?token=exp=1641599538~hmac=13dfd58342c406b4796b552b7105b0b7" alt="" />
+  <img  className='icon' src={telefono} alt="" />
   <span>(+505)5854-9438</span>
   </div>
 
   <div>
-  <img className='icon' src="https://cdn-icons-png.flaticon.com/128/4643/4643972.png" alt="" />
+  <img className='icon' src={mapa} alt="" />
   <span>Esteli/Nicaragua, De los Semaforos de enabas 1 cuadra al este y media cuadra al sur</span>
   </div>
    <div>
-  <img  className='icon' src="https://cdn-icons.flaticon.com/png/128/3178/premium/3178232.png?token=exp=1641601032~hmac=a3217315db96be0e087cf773b89afe96" alt="" />
+  <img  className='icon' src={mail} alt="" />
   <span>travelingsafe@gmail.com</span>
   </div>
 </div>

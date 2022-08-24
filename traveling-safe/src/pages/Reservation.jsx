@@ -1,14 +1,14 @@
+
 import React from "react";
 import {useEffect, useState} from 'react'
 import { Navbar } from "../components/Navbar";
-import { Form } from "../components/form";
-import { Carroussel } from "../components/carrousell";
 import { Contact } from "../components/Contact";
 import { Divider } from "../components/divider";
 import { Footer } from "../components/footer";
 import axios from 'axios'
+import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 import {api} from '../services/api'
-
+import '../styles/Carrousell.scss'
 
 
 
@@ -19,11 +19,10 @@ export function Reservation(props) {
 
 
 
-  useEffect(()=>{
-
-
   
-
+  
+  
+  useEffect(()=>{
     const getInformation = async ()=>{
       await axios.get(api + "/places/" + id)
       
@@ -46,12 +45,50 @@ export function Reservation(props) {
       <header>
         <Navbar />
       </header>
-      <Carroussel />
+        <div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img className="d-block w-100" src={data.Images} alt="First slide"/>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src={data.Images1} alt="Second slide"/>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src={data.Images2} alt="Third slide"/>
+    </div>
+  </div>
+</div>
+        </div>
       <h2 className="text-center text-secondary mt-4">
-        ¡Bienvenido a nuestro <br /> sistema de Reservaciones!
+        Bienveidos a {data.namePlaces}
       </h2>
+  
 
-      <h2 className="text-center">{data.namePlaces}</h2>
+      <div className="contenedor mb-5 mt-5">
+        <div className="row">
+
+      
+        <div className="col-md-6">
+        <img
+                src={data.Images}
+                alt="Sunset and boats"
+              />
+        </div>
+        <div className="col-md-6">
+          <h2>{data.namePlaces}</h2>
+          <p>{data.description}</p>
+          </div>
+      </div>
+      </div>
+      <Divider/>
+
+      <h2 className="text-center mb-5">{data.namePlaces}</h2>
       <div className="contenedor mt-5">
         <div className="row mb-4">
           <div className="col-md-4">
@@ -60,6 +97,7 @@ export function Reservation(props) {
                 src={data.Images}
                 alt="Sunset and boats"
               />
+                <h4 className="text-center">{data.namePlaces}</h4>
             </div>
           </div>
        
@@ -68,16 +106,18 @@ export function Reservation(props) {
             
               <img
                 src={data.Images}
-                alt="Sunset and boats"
+                alt={data.namePlaces}
               />
+               <h4 className="text-center">{data.namePlaces}</h4>
             </div>
           </div>
           <div className="col-md-4">
             <div>
               <img
                 src={data.Images1}
-                alt="Sunset and boats"
+                alt={data.namePlaces}
               />
+              <h4 className="text-center">{data.namePlaces}</h4>
             </div>
           </div>
           <div className="col-md-4 mt-3">
@@ -86,6 +126,7 @@ export function Reservation(props) {
                 src={data.Images2}
                 alt="Sunset and boats"
               />
+              <h4 className="text-center">{data.namePlaces}</h4>
             </div>
           </div>
 
@@ -93,79 +134,36 @@ export function Reservation(props) {
             <div>
               <img
                 src={data.Images3}
-                alt="Sunset and boats"
+                alt={data.namePlaces}
               />
+
+<h4>{data.namePlaces}</h4>
             </div>
           </div>
           <div className="col-md-4 mt-3">
             <div>
               <img
                 src={data.Images4}
-                alt="Sunset and boats"
+                alt={data.namePlaces}
               />
+              <h4 className="text-center">{data.namePlaces}</h4>
             </div>
           </div>
         </div>
       </div>
 
       <div className="contenedor mt-5 bg-gray mb-5">
-      <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label forLabel="inputEmail4">Nombre Completo</label>
-      <input type="text" className="form-control" id="inputEmail4" placeholder="Nombres Completo"/>
-    </div>
-    <div className="form-group col-md-6">
-      <label forLabel="inputPassword4">Email</label>
-      <input type="email" className="form-control" id="inputPassword4" placeholder="Email"/>
-    </div>
-  </div>
-  <div className="form-group">
-    <label forLabel="inputAddress">Dirección</label>
-    <input type="text" className="form-control" id="inputAddress" placeholder="Dirección"/>
-  </div>
-  <div className="form-group ">
-      <label forLabel="inputState">Habitaciones</label>
-      <select id="inputState" className="form-control">
-        <option selected>Escoja el tipo de habitación</option>
-        <option>1 cama</option>
-        <option>2 cama</option>
-        <option>3 cama</option>
-        <option>4 cama</option>
-      </select>
-    </div>
-  <div className="form-row">
-    <div className="form-group col-md-6">
-      <label forLabel="inputCity">City</label>
-      <input type="text" className="form-control" id="inputCity"/>
-    </div>
-    <div className="form-group col-md-4">
-      <label forLabel="inputState">Departamentos</label>
-      <select id="inputState" className="form-control">
-        <option selected>Departamentos</option>
-        <option>Estelí</option>
-        <option>Masaya</option>
-        <option>Granada</option>
-        <option>Managua</option>
-        <option>León</option>
-      </select>
-    </div>
-    <div className="form-group col-md-2">
-      <label forLabel="inputZip">Precios</label>
-      <input type="text" className="form-control" id="inputZip"/>
-    </div>
-  </div>
-  <div className="form-group">
-    <div className="form-check">
-      <input className="form-check-input" type="checkbox" id="gridCheck"/>
-      <label className="form-check-label" forLabel="gridCheck">
-    Estoy de acuerdo con los terminos y condiciones
-      </label>
-    </div>
-  </div>
-  <button type="submit" className="btn btn-primary">Reservar</button>
-</form>
+    
+
 <Divider/>
+
+<div className="contenedor">
+  <h3 className="text-center">Geolocalización de {data.namePlaces}</h3>
+<iframe className=" mt-5 mb-5 col-md-12 col-sm-12" src={data.Geolocation}  allowfullscreen="" loading="lazy"
+        width="1140" height="600"  
+        />
+</div>
+
 
 <div className="contenedor">
 <Contact/>

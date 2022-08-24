@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Login.scss";
 import Beach from "../assets/beachLandin.png";
-import Logo from "../assets/logo-paraTraveling-safe.gif";
-import Google from "../assets/search.png";
+import Logo from "../assets/LogoEmpresa.png";
+
 import Modal from "react-modal";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
@@ -96,12 +96,12 @@ export function Login() {
         <img src={Beach} alt="" />
       </aside>
       <main>
-        <div className="main-content mb-5 col-md-12">
+        <div className="main-content mb-5 mt-5 col-md-12">
           <img
             src={Logo}
             alt="Logo de Trsavelin safe"
-            width={700}
-            height="500"
+            width="250px"
+            height="250px"
           />
 
           <Modal

@@ -7,7 +7,7 @@ return(
         <div className="contenido-footer">
 
             <div className='info'>
-            <h1 className='text-white'>Traveling-Safe</h1>
+            <h3 className='text-white'>Traveling-Safe</h3>
         <span className='text-white'>&copy; Copyright 2022</span> 
         <p className='text-white'>Todos los Derechos Reservados</p>
             </div>
